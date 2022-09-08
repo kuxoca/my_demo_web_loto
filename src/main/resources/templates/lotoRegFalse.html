@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link th:href="@{/css/bootstrap.min.css}" th:rel="stylesheet"/>
+    <title th:text="${title}">Title</title>
+</head>
+
+<body>
+<header th:insert="blocks/header :: header "></header>
+<main>
+    <div class="container col-xl-8 col-lg-10 col-sm-12">
+
+        <p class="h3 my-3 text-center">LOTO разрешение <b class="text-danger"> НЕ </b>
+            зарегистрирован </p>
+        <p class="h4 my-4 text-center text-danger">Ошибка, попробуйте повторить регистрацию</p>
+    </div>
+</main>
+
+<div th:insert="blocks/footer :: footer"></div>
+</body>
+
+</html>

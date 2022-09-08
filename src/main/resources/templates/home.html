@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"/>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <link th:href="@{/css/bootstrap.min.css} " th:rel="stylesheet"/>
+</head>
+<body>
+
+<header th:insert="blocks/header :: header "></header>
+<main>
+    <div class="container mt-5">
+        <h3>Домашняя страница</h3>
+    </div>
+    <div class="container mt-5">
+        <p>Для регисттрации LOTO наряда перейдите по <a href="/workpermit/loto/">ссылке</a></p>
+    </div>
+
+</main>
+
+<div th:insert="blocks/footer :: footer"></div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

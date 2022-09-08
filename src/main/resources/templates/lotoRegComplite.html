@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link th:href="@{/css/bootstrap.min.css}" th:rel="stylesheet"/>
+    <title th:text="${title}">Title</title>
+</head>
+
+<body>
+<header th:insert="blocks/header :: header "></header>
+
+<main>
+    <div class="container col-xl-8 col-lg-10 col-sm-12">
+        <th:block th:object="${lotoDto}">
+            <p class="h3 my-3 text-center" th:text="'LOTO разрешение зарегистрирован под номером '+*{id} + ', '
+        +*{dateTime}">LOTO разрешение зарегистрирован под номером </p>
+        </th:block>
+        <div class="row align-items-center">
+            <img alt="..." class="img-fluid" th:src="${lotoDto.fileDownloadUri}">
+        </div>
+    </div>
+</main>
+
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>
